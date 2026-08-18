@@ -1,0 +1,10 @@
+export * as habitService from './habitService';
+export * as waterService from './waterService';
+export * as weightService from './weightService';
+export * as exerciseService from './exerciseService';
+export * as streakService from './streakService';
+export * as penaltyService from './penaltyService';
+export * as analyticsService from './analyticsService';
+export * as coachService from './coachService';
+export * as storageService from './storageService';
+export * as settingsService from './settingsService';
