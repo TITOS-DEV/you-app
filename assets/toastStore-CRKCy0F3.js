@@ -1,0 +1,1 @@
+import{F as e,L as t,x as n}from"./date-DS5gCAqo.js";var r=e(`check`,[[`path`,{d:`M20 6 9 17l-5-5`,key:`1gmf2c`}]]),i=t(e=>({toasts:[],show:(t,r=`default`)=>{let i=n();e(e=>({toasts:[...e.toasts,{id:i,message:t,tone:r}]})),setTimeout(()=>{e(e=>({toasts:e.toasts.filter(e=>e.id!==i)}))},2800)},dismiss:t=>e(e=>({toasts:e.toasts.filter(e=>e.id!==t)}))}));export{r as n,i as t};

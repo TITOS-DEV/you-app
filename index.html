@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover, maximum-scale=1" />
+    <title>YOU</title>
+    <meta name="description" content="YOU — tu espacio. Tu progreso. Tu disciplina." />
+
+    <link rel="icon" type="image/png" href="/you-app/favicon.png" />
+    <link rel="apple-touch-icon" href="/you-app/icons/apple-touch-icon.png" />
+    <!-- vite-plugin-pwa injects the correctly base-prefixed
+         <link rel="manifest"> automatically at build time. -->
+
+    <meta name="theme-color" content="#0a0a0d" />
+    <meta name="color-scheme" content="light dark" />
+
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="apple-mobile-web-app-title" content="YOU" />
+
+    <script>
+      // Apply the stored theme before first paint to avoid a flash of the
+      // wrong palette while React and Dexie settings load.
+      (function () {
+        try {
+          var cached = localStorage.getItem('you-theme');
+          var theme = cached === 'light' || cached === 'dark' ? cached : null;
+          if (!theme) {
+            var prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+            theme = prefersDark ? 'dark' : 'light';
+          }
+          document.documentElement.setAttribute('data-theme', theme);
+          document.documentElement.style.colorScheme = theme;
+        } catch (e) {}
+      })();
+    </script>
+    <script type="module" crossorigin src="/you-app/assets/index-Dcr97Prr.js"></script>
+    <link rel="modulepreload" crossorigin href="/you-app/assets/date-DS5gCAqo.js">
+    <link rel="modulepreload" crossorigin href="/you-app/assets/useSettings-TH64Nbos.js">
+    <link rel="modulepreload" crossorigin href="/you-app/assets/toastStore-CRKCy0F3.js">
+    <link rel="modulepreload" crossorigin href="/you-app/assets/sheetStore-CR0wcE_r.js">
+    <link rel="modulepreload" crossorigin href="/you-app/assets/streakService-BYs6_E7c.js">
+    <link rel="modulepreload" crossorigin href="/you-app/assets/useStreak-CfbIocsp.js">
+    <link rel="modulepreload" crossorigin href="/you-app/assets/sparkles-BHeTkV01.js">
+    <link rel="modulepreload" crossorigin href="/you-app/assets/exerciseService-CNly3mma.js">
+    <link rel="modulepreload" crossorigin href="/you-app/assets/useExercise-Ct2CYhtT.js">
+    <link rel="modulepreload" crossorigin href="/you-app/assets/settingsService-BHTMB8tG.js">
+    <link rel="modulepreload" crossorigin href="/you-app/assets/empty-state-BaAQnhr1.js">
+    <link rel="stylesheet" crossorigin href="/you-app/assets/index-IkCQo-e0.css">
+  <link rel="manifest" href="/you-app/manifest.webmanifest"><script id="vite-plugin-pwa:register-sw" src="/you-app/registerSW.js"></script></head>
+  <body>
+    <div id="root"></div>
+  </body>
+</html>
